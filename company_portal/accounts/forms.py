@@ -7,3 +7,7 @@ class CustomUserCreationForm(UserCreationForm):
         model = CustomUser
         fields = ['username', 'email', 'password1', 'password2', 'role']
 
+class LoginForm(AuthenticationForm):
+    username = forms.CharField(label="Username")
+    password = forms.CharField(label="Password", widget=forms.PasswordInput)
+
