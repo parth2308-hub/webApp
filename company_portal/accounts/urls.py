@@ -1,6 +1,9 @@
 from django.urls import path
 from django.contrib.auth import views as auth_views
 from . import views
+from django.contrib import admin
+from django.urls import path, include
+from django.shortcuts import render
 
 urlpatterns = [
     path('register/', views.register_view, name='register'),
@@ -9,5 +12,6 @@ urlpatterns = [
     path('dashboard/', views.dashboard_view, name='dashboard'),
     path('logout/', views.logout_view, name='logout'),
     path('', views.home, name='home'),
+
 ]
 
